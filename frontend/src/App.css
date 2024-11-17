@@ -1,0 +1,209 @@
+.App {
+  max-width: 80%;
+  margin: 50px auto;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.column {
+  width: 45%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.column:hover {
+  background-color: #f0f0f0;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 800;
+  color: #2c2c2c;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+}
+
+h3 {
+  margin: 20px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.8;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: circle;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+#restaurants {
+  margin: 6% auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+#restaurants:hover {
+  background-color: #f8f8f8;
+}
+
+.restaurant-list {
+  margin-bottom: 25px;
+  text-align: center;
+  background-color: #FFF3AD;
+  padding: 25px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-list:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-buttons:hover {
+  transform: scale(1.05);
+}
+
+.star-btn, .edit-btn, .save-btn, .delete-btn, .unstar-btn, .submit-btn {
+  background-color: #f4c542;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-btn:hover, .edit-btn:hover, .save-btn:hover, .delete-btn:hover, .unstar-btn:hover, .submit-btn:hover {
+  background-color: #e0b72f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#add-new {
+  text-align: center;
+  margin: 30px 0;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+#add-new:hover {
+  transform: translateY(-5px);
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.starred-restaurant {
+  text-align: center;
+  color: #ffffff;
+  background-color: #553E4E;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.starred-restaurant:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.created-by {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 14px;
+  color: #555;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.created-by:hover {
+  background-color: #dedede;
+  transform: scale(1.1);
+}
+
+.App::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+    float: none;
+    padding: 10px;
+  }
+  .App {
+    width: 95%;
+  }
+  h1, h2 {
+    font-size: 2em;
+  }
+  .restaurant-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.6em;
+  }
+  .created-by {
+    font-size: 12px;
+    right: 15px;
+    bottom: 15px;
+  }
+  .restaurant-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .star-btn, .edit-btn, .save-btn, .delete-btn, .unstar-btn, .submit-btn {
+    padding: 8px 16px;
+  }
+}
